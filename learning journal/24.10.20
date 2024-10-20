@@ -1,0 +1,19 @@
+今天突发奇想把mysql指令复习一遍（预计16章）两个星期完成，再把高性能mysql学完（大二上）
+进度：DISTINCT 去重指令
+①SELECT salary, DISTINCT department_id
+FROM employees;（false）
+②SELECT DISTINCT salary, department_id
+FROM employees;（true）
+③IFNULL（null, 0）
+
+
+对有限数寻数题目的理解：
+一定要注意边界，优化是对指针双边界存在的优化，定一寻二
+
+通过创建一对彩色笔的加深对CSS颜色代码的理解
+text-align 文字归中
+padding: 10px 0（上 宽）
+border-left: 10px double rgba(0, 0, 0, 0.75); (宽，亮，颜色)
+display:inline-bloke: 该元素可以位于其他元素旁边
+linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27)): 渐变色，可以在rgb后加75%表范围
+box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8):阴影的 X 轴偏移量、Y 轴偏移量、模糊半径、扩散半径和颜色
