@@ -17,3 +17,10 @@ border-left: 10px double rgba(0, 0, 0, 0.75); (宽，亮，颜色)
 display:inline-bloke: 该元素可以位于其他元素旁边
 linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27)): 渐变色，可以在rgb后加75%表范围
 box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8):阴影的 X 轴偏移量、Y 轴偏移量、模糊半径、扩散半径和颜色
+
+通过创立注册表学习
+①通过设置 body 的默认 margin 为 0 来重置一些浏览器的默认设置，从而去掉水平滚动条。
+②表单数据可以作为 URL 变量（使用 method="get"）或作为 HTTP POST 事务（使用 method="post"）发送。
+③label和input可以通过for相连
+④email 类型只允许包含 @ 以及域名中包含 . 的电子邮件。 password 类型会屏蔽输入，如果网站没有启用 HTTPS 会警告
+(预计暑假复习一遍)
