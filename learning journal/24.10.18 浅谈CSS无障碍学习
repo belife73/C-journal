@@ -1,0 +1,90 @@
+body {
+  background: #f5f6f7;
+  color: #1b1b32;（字体颜色）
+  font-family: Helvetica;
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  height: 50px;
+  background-color: #1b1b32;
+  display: flex;(弹性盒子布局)
+}
+
+#logo {
+  width: max(10rem, 18vw);(最大最小范围 若html：默认font-size="16px" 1rem="16px" vw="%")
+  background-color: #0a0a23;
+  aspect-ratio: 35 / 4;(logo长宽比)
+  padding: 0.4rem;（图片width="width + padding - border"）
+}
+
+nav(定义导航链接的部分)
+无序列表 ul - 列表项标记用特殊图形（如小黑点、小方框等）接（li）
+有序列表 ol - 列表项的标记有数字或字母
+
+nav > ul （> 寻找 nav的子元素ul）{ 
+  display: flex;
+  justify-content: space-evenly; (从space-start --- space-around --- space-evenly 内容从四角到中间靠拢（上下距离不变）)
+}
+h1, h2 {
+  font-family: Verdana, sans-serif;(sans-serif网络安全字体)
+}
+
+h2{
+  border-bottom: 4px solid #dfdfe2;（下边框的 宽 实心 颜色）
+}
+.sr-only {
+  position: absolute;（绝对位置可重叠）
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;(出框内容隐藏)
+  clip: rect(0, 0, 0, 0);（裁剪看不懂）
+  white-space: nowrap;（不换行）
+  border: 0;
+}
+h3::before {
+  content: "Question #";(CSS 中，::before 创建一个伪元素，其将成为匹配选中的元素的第一个子元素。常通过 content 属性来为一个元素添加修饰性的内容。此元素默认是行级的。)
+}
+nav > ul > li {
+  color: #dfdfe2;
+  margin: 0 0.2rem;
+  padding: 0.2rem;
+  display: block;（块级元素）
+}
+li > a {
+  text-decoration: none;(取消下划线)
+}
+nav > ul > li:hover {
+(:link表示鼠标点击之前，也称为原始状态
+:hover表示鼠标悬停状态
+:active表示鼠标点击状态
+:visited表示鼠标点击之后状态)
+
+  background-color: #dfdfe2;
+  color: #1b1b32;
+  cursor: pointer;（悬浮是通常显示是手）
+}
+li > a {
+  color: inherit;(继承父元素)
+}
+
+<主题>
+      <nav>
+        <ul>
+          <li><a href="#student-info">INFO</a></li>(为了能够在页面内导航，给每个锚元素一个与 h2 元素的 id 相对应的 href)
+          <li><a href="#html-questions">HTML</a></li>
+          <li><a href="#css-questions">CSS</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>(body的主体部分)
+      <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz"> （method: 输入到action的方式 action：form中的信息输入到哪里）
+        <section role="region" aria-labelledby="student-info">
+          <h2 id="student-info">Student Info</h2>
+          <div class="info">
+            <label for="student-name">Name:</label>(for 和 id 的值要相等)
+            <input type="text" name="student-name" id="student-name" placeholder="e.g. Quincy Larson" />
+          </div>
