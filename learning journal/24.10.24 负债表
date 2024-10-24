@@ -1,0 +1,109 @@
+<table>
+    <caption>Assets</caption>(<caption> 元素 展示一个表格的标题，它常常作为 <table> 的第一个子元素出现,它同样可以被 CSS 样式化，所以，它同样可以出现在任何一个一个相对于表格的做任意位置。)
+   <thead>
+              <tr>(`tr` 元素用于指示表格行)
+                <td></td>(td 元素表示一个数据单元，而 th 元素表示一个标题单元。)(将 td 元素留空。 此元素的存在只是为了确保表格具有四列布局并将标题与正确的列相关联。)
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>(使用thead和tbody元素可以指示表格的哪一部分是标题，哪一部分包含主要数据或内容。)
+    <tbody></tbody>
+</table>
+
+aria-hidden 属性可用于隐藏非交互内容，使其在无障碍 API 中不可见。
+
+(实例)
+tr：tr 是 table row 的缩写，表示表格的一行。
+td：td 是 table data 的缩写，表示表格的数据单元格。
+th：th 是 table header的缩写，表示表格的表头单元格
+ps:
+<table>
+  <thead>
+    <tr>
+      <th>列标题1</th>
+      <th>列标题2</th>
+      <th>列标题3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>行1，列1</td>
+      <td>行1，列2</td>
+      <td>行1，列3</td>
+    </tr>
+    <tr>
+      <td>行2，列1</td>
+      <td>行2，列2</td>
+      <td>行2，列3</td>
+    </tr>
+  </tbody>
+</table>
+
+
+(CSS)
+#(content-box 是默认值。如果你设置一个元素的宽为 100px，那么这个元素的内容区会有 100px 宽，并且任何边框和内边距的宽度都会被增加到最后绘制出来的元素宽度中。
+border-box 告诉浏览器：你想要设置的边框和内边距的值是包含在 width 内的。也就是说，如果你将一个元素的 width 设为 100px，那么这 100px 会包含它的 border 和 padding，
+内容区的实际宽度是 width 减去 (border + padding) 的值。大多数情况下，这使得我们更容易地设定一个元素的宽高)
+html {
+  box-sizing: border-box;
+}
+
+
+#不必经常检查是否覆盖了以前的属性，可以使用！important关键字来确保始终应用这些属性，而不考虑顺序或专一性。
+#(span[class~="sr-only"] 选择器将选择任何 span 元素，其 class 包括 sr-only。 创建该选择器，并将其 border 属性设置为 0。)
+#clip 属性定义了元素的哪一部分是可见的。(不推荐使用)
+span[class~="sr-only"] {
+  border: 0 !important;
+  clip-path:inset(50%);（图片显示范围）
+  clip:rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;(溢出不显示)
+  white-space: nowrap;（不换行）
+}
+
+#分隔后latter 在 former 上面
+#CSS gap 简写属性用于设置行与列之间的间隙（可溢出）
+h1 .flex {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1rem;
+}
+
+#相对定位元素（relatively positioned element）是计算后位置属性为 relative的元素。
+#border-collapse CSS 属性是用来决定表格的边框是分开的还是合并的。在分隔模式下，相邻的单元格都拥有独立的边框。在合并模式下，相邻单元格共享边框。
+table {
+  border-collapse: collapse;
+  border: 0;
+  width: 100%;
+  margin: 3rem;
+  position:relative;
+}
+
+#以flex容器中的最后一个span为目标，
+h1 .flex span:last-of-type {
+  font-size: 1.2em;
+}
+
+#years {
+  z-index:999;(z-index 属性设置定位元素及其后代元素或 flex 项目的 Z 轴顺序。z-index 较大的重叠元素会覆盖较小的元素。)
+  display: flex;
+  justify-content: flex-end; (文字靠右)
+  position: sticky; 
+  top: 0;
+  background: #0a0a23;
+  color: #fff;
+  margin: 0 -2px;
+  padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0;(calc（）函数是一个CSS函数，它允许您根据其他值计算一个值。例如，你可以用它来计算视口的宽度减去元素的边距：)
+}
+
+#years span[class] {
+  font-weight: bold;(字体粗细)
+  width: 4.5rem;
+  text-align: right;
+}
+
+td.current{
+  font-style: italic;(斜体)
+}
