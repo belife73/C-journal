@@ -1,0 +1,39 @@
+#CSS
+
+#static 是所有元素的默认定位。 如果你将元素设置为这个定位，你将无法用 top、right、left 或 bottom 移动元素。
+#当你使用 relative 值时，元素仍然按照文档的正常流程定位，但是 top、left、bottom 和 right 值变为活动状态。
+# 当你为 position 属性使用 absolute 值时，该元素将从文档的正常流程中取出，然后其位置由 top、right、bottom 和 left 属性决定
+#fixed 是一个 position 属性值，可让你将元素固定到页面，无论用户滚动到页面上的哪个位置。
+#最后一个位置属性值为 sticky。 sticky 定位是 relative 定位和 fixed 定位的混合体。 它允许元素根据滚动位置粘到其包含元素或视口中的特定位置。
+#将 .cat-head 元素的 position 属性设置为 absolute。 将 right、left、top、bottom 属性设置值 0 ，然后将其所有边的 margin 属性设置为 auto。 这是使用 CSS 定位将元素垂直和水平居中的一种方法。
+.cat-head {
+  position: static;
+  left: 100px;
+  width: 205px;
+  height: 180px;
+  border: 1px solid #000;
+  border-radius: 46%; （border-radius 允许你设置元素的外边框圆角）
+  background: linear-gradient(#5e5e5e 85%, #45454f 100%); (渐变色 0.5deg旋转角度 .25turn旋转九十度)
+}
+
+cat-right-ear {
+  height: 0;
+  width: 0;
+  border-left: 35px solid  transparent;
+  border-right: 35px solid  transparent;
+  border-top: 35px solid  transparent;(transparent 透明色)
+  border-bottom: 35px solid Red;
+}
+
+#transform 属性允许你在不改变布局或影响周围元素的情况下修改元素的形状、位置和大小。 它具有 translate()、rotate()、scale()、skew() 和 matrix() 等功能。
+.cat-left-ear {
+  position: absolute;
+  top: -26px;
+  left: -31px;
+  border-top-left-radius: 90px;
+  border-top-right-radius: 10px;
+  transform: rotate(-45deg); 
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-bottom: 70px solid #5e5e5e;
+}
